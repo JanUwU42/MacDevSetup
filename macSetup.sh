@@ -47,7 +47,7 @@ then
     echo "SSH key generated. Public key:"
     echo "$(cat ~/.ssh/id_ed25519.pub)"
     echo ""
-    echo "Add this key to GitLab."
+    echo "Add this key to your Git hosting service (GitLab/GitHub/Codeberg/...)."
 else
     echo "SSH key already exists, skipping generation."
 fi
@@ -70,9 +70,9 @@ cd ~/CodeProjects
 echo "Cloning repositories..."
 # Format: "repo-url:custom-name" or just "repo-url" for default name
 repos=(
-      "TODO:git@github.com:username/repo1.git:custom-name"
-      "TODO:git@github.com:username/repo2.git"
-      # Add your repositories here
+    "TODO:git@github.com:username/repo1.git:custom-name"
+    "TODO:git@github.com:username/repo2.git"
+    # Add your repositories here
 )
 
 for repo in "${repos[@]}"
